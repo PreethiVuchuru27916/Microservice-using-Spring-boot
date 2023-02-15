@@ -18,9 +18,15 @@ public class TourRating {
     @Column
     private String comment;
 
-    public TourRating() {
+    public TourRating(TourRatingPk tourRatingPk, Integer score, String comment) {
+        this.pk = tourRatingPk;
+        this.score = score;
+        this.comment = comment;
+    }
+    protected TourRating() {
 
     }
+
     @Override
     public String toString() {
         return "TourRating{" +

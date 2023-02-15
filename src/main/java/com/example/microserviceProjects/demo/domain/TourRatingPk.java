@@ -14,6 +14,13 @@ public class TourRatingPk implements Serializable {
     @Column(insertable = false, updatable = false, nullable = false)
     private Integer customerId;
 
+    public TourRatingPk(Tour tour, Integer customerId) {
+        this.tour = tour;
+        this.customerId = customerId;
+    }
+    protected TourRatingPk() {
+
+    }
     public Tour getTour() {
         return tour;
     }
