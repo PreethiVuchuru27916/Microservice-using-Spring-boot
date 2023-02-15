@@ -1,5 +1,6 @@
 package com.example.microserviceProjects.demo.web;
 
+import com.example.microserviceProjects.demo.domain.TourRating;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
@@ -25,6 +26,10 @@ public class RatingDto {
         this.score = score;
         this.comment = comment;
         this.customerId = customerId;
+    }
+
+    public RatingDto(TourRating tourRating) {
+        this(tourRating.getScore(), tourRating.getComment(), tourRating.getPk().getCustomerId());
     }
 
     public Integer getScore() {
