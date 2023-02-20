@@ -2,12 +2,14 @@ package com.example.microserviceProjects.demo.service;
 
 import com.example.microserviceProjects.demo.domain.TourPackage;
 import com.example.microserviceProjects.demo.repo.TourPackageRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class TourPackageService {
     private TourPackageRepository tourPackageRepository;
 
+    @Autowired
     public TourPackageService(TourPackageRepository tourPackageRepository) {
         this.tourPackageRepository = tourPackageRepository;
     }

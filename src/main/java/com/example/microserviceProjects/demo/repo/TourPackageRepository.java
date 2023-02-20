@@ -10,7 +10,6 @@ import java.util.Optional;
 @RepositoryRestResource(collectionResourceRel = "packages", path = "packages")
 public interface TourPackageRepository extends CrudRepository<TourPackage, String> {
     Optional<TourPackage> findByName(String tourPackageName);
-
     @Override
     @RestResource(exported = false)
     <S extends TourPackage> S save(S entity);
